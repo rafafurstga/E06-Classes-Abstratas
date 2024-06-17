@@ -2,8 +2,8 @@ public class Main {
     public static void main(String[] args) {
         PessoaFisica joao = PessoaFisica.criarPessoaFisica("João", "117.252.516-12", "Av. Antonio Carlos, 6627", 36, 'm');
 
-        Conta conta1 = new Conta(1234, joao, 0, 1500);
-        Conta conta2 = new Conta(12121, joao, 10000, 1500);
+        ContaCorrente conta1 = new ContaCorrente(1234, joao, 0, 1500);
+        ContaPoupanca conta2 = new ContaPoupanca(12121, joao, 10000, 1500);
 
         conta1.depositar(3000);
         conta1.depositar(2000);

@@ -1,4 +1,4 @@
-public class Conta {
+public abstract class Conta {
 
     protected int numero;
 
@@ -14,17 +14,6 @@ public class Conta {
 
     protected static int totalContas = 0;
 
-
-    public Conta(int numero, Cliente dono, double saldo, double limite) {
-        this.numero = numero;
-        this.dono = dono;
-        this.saldo = saldo;
-        this.limite = limite;
-
-        this.operacoes = new Operacao[10];
-        this.proximaOperacao = 0;
-        Conta.totalContas++;
-    }
 
     Operacao[] fazOperacaoS(double valor){
         if(this.operacoes.length<=proximaOperacao){
@@ -120,11 +109,12 @@ public class Conta {
         this.dono = dono;
     }
 
-    public void setLimite(double limite) {
+    public boolean setLimite(double limite) {
         if (limite < 0)
             limite = 0;
 
         this.limite = limite;
+        return true;
     }
 
     public boolean equals(Conta conta){
@@ -133,5 +123,9 @@ public class Conta {
         }else{
             return false;
         }
+    }
+
+    Conta(){
+
     }
 }

@@ -45,6 +45,16 @@ public class PessoaFisica extends Cliente{
         }
     }
 
+    public boolean autenticar(String chave){
+        if(chave.equals(this.getCpf())){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+
+
     PessoaFisica(String nome, String cpf, String endereco, int idade, char sexo){
         super(nome, endereco);
         setIdade(idade);

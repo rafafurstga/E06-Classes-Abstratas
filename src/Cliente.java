@@ -76,6 +76,8 @@ public abstract class Cliente {
         return cpfValido;
     }
 
+    public abstract boolean autenticar(String chave);
+
     Cliente(String nome, String endereco) {
         setNome(nome);
         setEndereco(endereco);

@@ -40,6 +40,13 @@ String setor*/
             return false;
         }
     }
+    public boolean autenticar(String chave){
+        if(chave.equals(this.getCnpj())){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
     PessoaJuridica(String nome, String cnpj, String endereco, int numFuncionarios, String setor){
         super(nome, endereco);
